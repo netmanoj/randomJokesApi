@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Load jokes from files
 const jokes1 = JSON.parse(fs.readFileSync('jokes1.json', 'utf8'));
@@ -24,5 +24,5 @@ app.get('/all-jokes', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Joke API running at http://localhost:${port}`);
+  console.log(`Joke API running on port ${port}`);
 });
