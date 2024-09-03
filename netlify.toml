@@ -1,0 +1,12 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/random-joke"
+  to = "/.netlify/functions/index"
+  status = 200
+
+[[redirects]]
+  from = "/all-jokes"
+  to = "/.netlify/functions/index"
+  status = 200
